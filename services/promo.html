@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Промо | ALCHEMIST SOUND</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Geist:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+  <link rel="stylesheet" href="../assets/css/pages/promo.css" />
+  <link rel="stylesheet" href="../assets/css/components/particles.css" />
+</head>
+<body>
+  <!-- Навбар -->
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-logo">ALCHEMIST SOUND</a>
+      <nav class="navbar-nav">
+        <a href="../index.html" class="navbar-link">Главная</a>
+        <a href="../index.html#services" class="navbar-link">Услуги</a>
+        <a href="../index.html#contact" class="navbar-link">Контакты</a>
+      </nav>
+      <button class="navbar-toggle" aria-label="Меню" id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar-mobile" id="navbar-mobile">
+      <a href="../index.html" class="navbar-link">Главная</a>
+      <a href="../index.html#services" class="navbar-link">Услуги</a>
+      <a href="../index.html#contact" class="navbar-link">Контакты</a>
+    </div>
+  </header>
+
+  <main class="service-page">
+    <div class="container">
+      <h1 class="page-title fade-in">Промо</h1>
+      
+      <p class="page-desc fade-in delay-1">
+        Мы не просто рекламируем ваш релиз — мы запускаем его в орбиту.
+      </p>
+
+      <!-- Слайдер -->
+      <div class="promo-slider" id="promo-slider">
+        <button class="slider-btn prev" aria-label="Предыдущая">←</button>
+        
+        <div class="slider-wrapper">
+          <div class="slider-slide active">
+            <div class="card-icon">
+              <img src="../assets/img/source/vk.png" alt="VKontakte" loading="lazy">
+            </div>
+            <h3>Плейлисты ВКонтакте</h3>
+            <p>Ручной подбор тематических плейлистов с живой аудиторией. Ваш трек попадает не в «мёртвый сборник», а к слушателям, которые ждут именно ваш звук.</p>
+          </div>
+
+          <div class="slider-slide">
+            <div class="card-icon">
+              <img src="../assets/img/source/tt.png" alt="TikTok" loading="lazy">
+            </div>
+            <h3>Блогеры в TikTok</h3>
+            <p>Видео от авторов с тысячами просмотров — не нативная реклама, а органичное вплетение вашего трека в трендовые форматы. Глаза видят — уши запоминают.</p>
+          </div>
+
+          <div class="slider-slide">
+            <div class="card-icon">
+              <img src="../assets/img/source/ig.png" alt="Instagram" loading="lazy">
+            </div>
+            <h3>Истории в Instagram</h3>
+            <p>Эстетичные сторис у профильных блогеров — от инди-медиа до музыкальных кураторов. Визуал + звук = максимальный охват за 15 секунд.</p>
+          </div>
+
+          <div class="slider-slide">
+            <div class="card-icon">
+              <img src="../assets/img/source/tg.png" alt="Telegram" loading="lazy">
+            </div>
+            <h3>Посты в Telegram</h3>
+            <p>Публикации в крупных музыкальных каналах и нишевых чатах — там, где обсуждают новинки и формируют вкус. Ваш релиз становится частью разговора.</p>
+          </div>
+        </div>
+
+        <button class="slider-btn next" aria-label="Следующая">→</button>
+      </div>
+
+      <!-- Индикаторы -->
+      <div class="slider-dots" id="slider-dots"></div>
+
+      <div class="cta-wrapper fade-in delay-3">
+        <a href="https://t.me/alchemistmanager" target="_blank" class="cta-button">
+          🔥 Запустить промо
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div class="particle particle-1"></div>
+  <div class="particle particle-2"></div>
+  <div class="particle particle-3"></div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

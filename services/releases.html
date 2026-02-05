@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Релизы | ALCHEMIST SOUND</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Geist:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+  <link rel="stylesheet" href="../assets/css/components/particles.css" />
+  <link rel="stylesheet" href="../assets/css/pages/releases.css" />
+</head>
+<body>
+  <!-- Навбар -->
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-logo">ALCHEMIST SOUND</a>
+      <nav class="navbar-nav">
+        <a href="../index.html" class="navbar-link">Главная</a>
+        <a href="../index.html#services" class="navbar-link">Услуги</a>
+        <a href="../index.html#contact" class="navbar-link">Контакты</a>
+      </nav>
+      <button class="navbar-toggle" aria-label="Меню" id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar-mobile" id="navbar-mobile">
+      <a href="../index.html" class="navbar-link">Главная</a>
+      <a href="../index.html#services" class="navbar-link">Услуги</a>
+      <a href="../index.html#contact" class="navbar-link">Контакты</a>
+    </div>
+  </header>
+
+  <main class="service-page">
+    <div class="container">
+      <h1 class="page-title fade-in">Релизы</h1>
+      
+      <p class="page-desc fade-in delay-1">
+        Загружаем ваши треки напрямую на Spotify, Apple Music, YouTube Music, Deezer, TikTok и другие платформы — без посредников, без скрытых комиссий.
+      </p>
+
+      <ul class="features fade-in delay-2">
+        <li>100% дохода от стримов — вам</li>
+        <li>Релиз за 5–7 дней</li>
+        <li>ISRC-коды, метаданные, UPC — всё включено</li>
+        <li>Поддержка pre-save и pre-add кампаний</li>
+      </ul>
+
+      <!-- Блок релизов -->
+      <div class="releases-section fade-in delay-3">
+        <div class="releases-grid">
+          <div class="release-item">
+            <div class="release-meta">
+              <div class="release-title">Откровенно</div>
+              <div class="release-artist">Марселин</div>
+            </div>
+            <img src="../assets/img/release-1.jpg" alt="Марселин – Откровенно">
+          </div>
+          <div class="release-item">
+            <div class="release-meta">
+              <div class="release-title">Worked Out</div>
+              <div class="release-artist">Vill Ray</div>
+            </div>
+            <img src="../assets/img/release-2.jpg" alt="Vill Ray – Worked Out">
+          </div>
+          <div class="release-item">
+            <div class="release-meta">
+              <div class="release-title">кротовые норы памяти</div>
+              <div class="release-artist">дваче</div>
+            </div>
+            <img src="../assets/img/release-3.jpg" alt="дваче – кротовые норы памяти">
+          </div>
+          <div class="release-item">
+            <div class="release-meta">
+              <div class="release-title">УКРФ2</div>
+              <div class="release-artist">Марселин</div>
+            </div>
+            <img src="../assets/img/release-4.jpg" alt="Марселин – УКРФ2">
+          </div>
+          <div class="release-item">
+            <div class="release-meta">
+              <div class="release-title">KING</div>
+              <div class="release-artist">Acfall</div>
+            </div>
+            <img src="../assets/img/release-5.jpg" alt="Acfall– KING">
+          </div>
+        </div>
+      </div>
+
+      <p class="gallery-note fade-in delay-4">Релизы будут пополняться</p>
+
+      <!-- Форма заявки -->
+      <div class="form-section fade-in delay-5">
+        <h2 class="form-title">Хотите выпустить релиз?</h2>
+        <form 
+          id="release-form"
+          action="https://tgform.ru/webhook/019c2a5f-cdd0-7b1b-a5b3-fd8a58ea7e04" 
+          method="POST"
+        >
+          <div class="form-group">
+            <input type="text" name="full_name" placeholder="ФИО" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="nickname" placeholder="Никнейм" required>
+          </div>
+          <div class="form-group">
+            <textarea name="why_you" placeholder="Почему должны взять именно вас?" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" name="telegram" placeholder="Username TG (например, @alchemist)" required>
+          </div>
+          <button type="submit" class="form-button">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Частицы -->
+  <div class="particle particle-1"></div>
+  <div class="particle particle-2"></div>
+  <div class="particle particle-3"></div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
