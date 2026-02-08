@@ -1,0 +1,252 @@
+.service-page {
+  padding: 8rem 0 5rem;
+}
+
+.page-title {
+  font-family: var(--font-alt);
+  font-size: clamp(2.5rem, 8vw, 3.8rem);
+  text-align: center;
+  margin-bottom: 1.8rem;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.page-desc {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2.8rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.features {
+  list-style: none;
+  max-width: 550px;
+  margin: 0 auto 3.5rem;
+  padding: 0;
+  text-align: center;
+}
+
+.features li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--color-text);
+  font-size: 1.05rem;
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+.cta-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1.1rem 3rem;
+  background: linear-gradient(135deg, var(--color-secondary), #a05aff);
+  color: var(--color-bg);
+  border-radius: 50px;
+  font-family: var(--font-alt);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(185, 103, 255, 0.3);
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s;
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(185, 103, 255, 0.5);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+/* === Кнопка "Заказать сведение" === */
+.order-cta {
+  text-align: center;
+  margin: 2.5rem 0 1.8rem;
+}
+
+.order-button {
+  display: inline-block;
+  padding: 1.2rem 3.2rem;
+  background: linear-gradient(135deg, #ff00cc, #3333ff);
+  color: white;
+  border-radius: 50px;
+  font-family: var(--font-alt);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(255, 0, 204, 0.4);
+  animation: pulseGlow 2s infinite alternate;
+}
+
+.order-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, transparent, rgba(255,255,255,0.4), transparent);
+  transition: transform 0.6s;
+}
+
+.order-button:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(255, 0, 204, 0.6);
+}
+
+.order-button:hover::before {
+  transform: translateX(100%) rotate(20deg);
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 8px 25px rgba(255, 0, 204, 0.4); }
+  100% { box-shadow: 0 8px 35px rgba(255, 0, 204, 0.7), 0 0 20px rgba(255, 0, 204, 0.3); }
+}
+
+/* === Кнопка "Примеры" (немного приглушена) === */
+.examples-cta {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.examples-button {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 50px;
+  font-family: var(--font-alt);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s ease;
+}
+
+.examples-button:hover {
+  background: rgba(0, 219, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 219, 255, 0.3);
+}
+
+/* === Бегущая строка с глитч-эффектом === */
+.marquee-section {
+  margin-top: 4rem;
+  overflow: hidden;
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marqueeScroll 22s linear infinite;
+  position: relative;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-text {
+  font-family: var(--font-alt);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  padding: 0 1.8rem;
+  text-shadow: 0 0 8px rgba(0, 219, 255, 0.6);
+  position: relative;
+}
+
+/* Глитч-эффект */
+.marquee-text::before,
+.marquee-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+.marquee-text::before {
+  color: var(--color-secondary);
+  animation: glitch-1 3s infinite;
+}
+
+.marquee-text::after {
+  color: #ff00cc;
+  animation: glitch-2 4s infinite;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-66.666%); } /* 2/3 ширины трека */
+}
+
+/* Анимации глитча */
+@keyframes glitch-1 {
+  0%, 100% { opacity: 0; transform: translateX(0); }
+  2%, 3%, 8%, 9% { opacity: 1; transform: translateX(-3px); }
+  5%, 6% { opacity: 1; transform: translateX(2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { opacity: 0; transform: translateX(0); }
+  1%, 2%, 7%, 8% { opacity: 1; transform: translateX(4px); }
+  4%, 5% { opacity: 1; transform: translateY(-2px); }
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 20s linear infinite;
+}
+
+.marquee span {
+  font-family: var(--font-alt);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  white-space: nowrap;
+  padding: 0 1.5rem;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

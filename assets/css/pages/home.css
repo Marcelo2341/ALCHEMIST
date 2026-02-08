@@ -1,0 +1,234 @@
+/* Header */
+.header {
+  padding: 1.8rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background: rgba(9, 9, 15, 0.6);
+  border-bottom: 1px solid rgba(185, 103, 255, 0.1);
+}
+
+.logo {
+  font-family: var(--font-alt);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--color-accent);
+}
+
+.nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: width 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 219, 255, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-family: var(--font-alt);
+  font-size: clamp(3rem, 12vw, 8rem);
+  font-weight: 600;
+  letter-spacing: -2px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* CTA Link (вместо кнопки) */
+.cta-link {
+  font-family: var(--font-alt);
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.cta-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width 0.4s ease;
+}
+
+.cta-link:hover::after {
+  width: 100%;
+}
+
+/* Философия / История */
+.philosophy {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.philosophy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-secondary), transparent);
+}
+
+.story-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #c0c0e0;
+}
+
+.story-text em {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+.story-text strong {
+  color: white;
+  font-weight: 600;
+}
+
+/* Services Section */
+.services {
+  padding: 6rem 0 5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-family: var(--font-alt);
+  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+  background: linear-gradient(90deg, var(--color-text), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Сетка услуг — теперь строго 2x2 на всех экранах ≥600px */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* На мобильных — одна колонка */
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 2.4rem 1.8rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(185, 103, 255, 0.15);
+  transition: all 0.4s ease;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(185, 103, 255, 0.4);
+  background: rgba(185, 103, 255, 0.03);
+}
+
+.service-card h3 {
+  font-family: var(--font-alt);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.service-card p {
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+/* Широкая карточка "Сведение" */
+.mixing-wide {
+  grid-column: span 2;
+  max-width: 100%;
+  padding: 2.6rem 2rem;
+}
+
+/* На мобильных — отменяем растягивание */
+@media (max-width: 600px) {
+  .mixing-wide {
+    grid-column: span 1;
+  }
+}
+
+/* Footer */
+.footer {
+  padding: 5rem 0 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.socials a {
+  color: var(--color-muted);
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: var(--color-secondary);
+}

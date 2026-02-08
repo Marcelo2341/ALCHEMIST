@@ -1,0 +1,149 @@
+.coming-soon {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at center, rgba(185, 103, 255, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.page-title {
+  font-family: var(--font-alt);
+  font-size: clamp(2.8rem, 10vw, 5rem);
+  text-align: center;
+  margin-bottom: 1.8rem;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+.status-badge {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.status-badge span {
+  display: inline-block;
+  padding: 0.4rem 1.4rem;
+  background: rgba(0, 219, 255, 0.1);
+  color: var(--color-accent);
+  border-radius: 30px;
+  font-family: var(--font-alt);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  border: 1px solid rgba(0, 219, 255, 0.2);
+}
+
+.message {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--color-text);
+  font-family: var(--font-alt);
+}
+
+.follow {
+  text-align: center;
+  color: var(--color-muted);
+  margin-bottom: 2.8rem;
+  font-size: 1.1rem;
+}
+
+/* Кнопки */
+.cta-group {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.9rem 2.4rem;
+  border-radius: 50px;
+  font-family: var(--font-alt);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, var(--color-secondary), #a05aff);
+  color: var(--color-bg);
+  box-shadow: 0 6px 20px rgba(185, 103, 255, 0.3);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  border: 1px solid var(--color-muted);
+  color: var(--color-muted);
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(185, 103, 255, 0.4);
+}
+
+.cta-button.secondary:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  box-shadow: 0 8px 20px rgba(185, 103, 255, 0.2);
+}
+
+/* Частицы для фона */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(185, 103, 255, 0.15);
+  z-index: -1;
+  animation: float 15s infinite ease-in-out;
+}
+
+.particle-1 {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  width: 80px;
+  height: 80px;
+  bottom: 15%;
+  right: 10%;
+  animation-delay: -5s;
+}
+
+.particle-3 {
+  width: 60px;
+  height: 60px;
+  top: 40%;
+  right: 20%;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(20px, -30px) rotate(5deg); }
+  50% { transform: translate(-15px, -10px) rotate(-3deg); }
+  75% { transform: translate(10px, 20px) rotate(2deg); }
+}

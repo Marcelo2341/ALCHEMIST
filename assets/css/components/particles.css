@@ -1,0 +1,40 @@
+/* Анимированные частицы для фона */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(185, 103, 255, 0.1);
+  z-index: -1;
+  animation: float 18s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.particle-1 {
+  width: 140px;
+  height: 140px;
+  top: 8%;
+  left: 7%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  width: 90px;
+  height: 90px;
+  bottom: 12%;
+  right: 8%;
+  animation-delay: -6s;
+}
+
+.particle-3 {
+  width: 70px;
+  height: 70px;
+  top: 35%;
+  right: 18%;
+  animation-delay: -12s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(25px, -35px) rotate(6deg); }
+  50% { transform: translate(-20px, -15px) rotate(-4deg); }
+  75% { transform: translate(15px, 25px) rotate(3deg); }
+}
